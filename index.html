@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List App</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+<body class="bg-green-100 min-h-screen flex flex-col">
+  <div class="flex-1 flex items-center justify-center">
+    <div class="bg-white border-200 rounded-xl w-full max-w-lg p-6">
+      <div class="border-2 border-pink-400 rounded-xl p-4 mb-6 bg-white-50 animate-fade-in">
+        <h1 class="text-2xl font-bold text-center text-pink-400 mb-6">🪷 To-Do List 🪷</h1>
+        <p class="text-center text-gray-600 mb-2">Manage your daily activities easily!</p>
+      </div>
+      <!-- Deskripsi -->
+      <p class="text-gray-600 mb-5 text-center">Use the form below to add a new activity.</p>
+      <!-- Form Input -->
+      <form id="todo-form" class="flex gap-2 mb-10">
+        <input type="text" id="task-input" placeholder="Add your activity..." required
+          class="flex-1 border border-pink-400 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-400">
+        <input type="date" id="date-input" required
+          class="border border-pink-400 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-400">
+        <button type="submit" 
+          class="bg-green-300 text-black-600 px-4 py-2 rounded-lg hover:bg-pink-400 transition">Add</button>
+      </form>
+      <!-- Filter -->
+      <div class="flex items-center gap-2 mb-4">
+        <input type="date" id="filter-date"
+          class="border border-pink-400 rounded-lg px-3 py-2 flex-1 focus:outline-none focus:ring-2 focus:ring-pink-400">
+        <button id="clear-filter" 
+          class="bg-green-300 text-black-600 px-4 py-2 rounded-lg hover:bg-green-400 transition">Reset</button>
+      </div>
+      <!-- Display To-Do -->
+      <ul id="todo-list" class="space-y-2"></ul>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="w-full text-center mt-2 mb-10 text-gray-600 text-sm">
+    © 2025 To-Do List App. Made with 💚 and 💖 for productivity.
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
